@@ -1,0 +1,23 @@
+-- Create a Dealership Database
+
+CREATE TABLE KaysMovement (Sold INTEGER PRIMARY KEY, Cars TEXT, Price INTEGER);
+INSERT INTO KaysMovement Values (223, "BMW", 30000);
+INSERT INTO KaysMovement Values (124, "Subaru",50000);
+INSERT INTO KaysMovement Values (125, "Tesla", 100000);
+INSERT INTO KaysMovement Values (526, "Ford", 30500);
+INSERT INTO KaysMovement Values (1727, "Toyota", 25000);
+INSERT INTO KaysMovement Values (228, "Nissan", 10000);
+INSERT INTO KaysMovement Values (333, "Honda", 23000);
+INSERT INTO KaysMovement Values (634, "Kia", 14000);
+
+--Display the Average price of cars on the Lot
+
+SELECT AVG (price) from kaysmovement;
+
+--Display the car that sold the most
+
+SELECT MAX (sold) FROM Kaysmovement;
+
+--What are the top five cars sold
+
+SELECT sold, cars, price FROM kaysmovement ORDER BY sold DESC limit 5;
